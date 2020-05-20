@@ -34,7 +34,7 @@ $stmtFiliais->execute();
 			?>
 			<form method=post id="editarSobre" action="./controllers/atualizarSobreController.php">
 				<div style="margin-top: 30px;">
-					<button type="button" class="btn btn-danger" onclick="document.location = 'index.php'">Cancelar Mudanças</button>
+					<button type="button" class="btn btn-danger" onclick="document.location = 'index.php#sobre'">Cancelar Mudanças</button>
 					<input type="submit" class="btn btn-primary" value="Salvar Mudanças">
 				</div>
 			</form>

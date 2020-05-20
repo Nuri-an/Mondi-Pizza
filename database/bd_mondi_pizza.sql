@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 13-Maio-2020 às 20:59
+-- Generation Time: 20-Maio-2020 às 02:30
 -- Versão do servidor: 5.6.15-log
 -- PHP Version: 5.5.8
 
@@ -102,6 +102,26 @@ CREATE TABLE IF NOT EXISTS `sobre` (
 
 INSERT INTO `sobre` (`idSobre`, `descricaoSobre`) VALUES
 (1, 'Mondi Pizza foi inaugurada em agosto de 2012 na atual sede da empresa, localizada em Belo Horizonte - MG. Nossa empresa é o resultado de anos de sonho e planejamento de Rosemere Focesca, fundadora e atual CEO da companhia. Temos uma trajetória familiar e nos baseamos nesses valores em todo serviço prestado. Nos dias de hoje, somos uma rede de pizzarias espalhadas por todas as regiões do estado de Minas Gerais. \r\n\r\nEm nossos estabelecimentos prezamos a qualidade dos produtos e a satisfação do cliente, por isso nossos funcionários são treinados e avaliados rotineiramente para que esse essa meta seja alcançada. Possuímos um atendimento totalmente informatizado, com equipamentos novos, profissionais treinados e instalações modernas e aconchegantes, além do salão com ar condicionado, que pode acomodar até 70 pessoas. Um ambiente aconchegante e familiar para descontrair enquanto saboreia sua pizza. Também oferecemos delivery, onde prezamos pelo cumprimento do prazo de entrega estabelecido ou a pizza sai por nossa conta!\r\n\r\nTemos um cardápio variado, indo de pizzas doces a salgadas. Possuímos diversos sabores, mas também temos a opção do cliente montar sua própria pizza com os ingredientes disponibilizados para essa escolha.\r\n\r\nAssim, aproveite e venha saborear a melhor pizza da sua região. Escolha o estabelecimento que se encontra mais pertinho de você e entre em contato!');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuarios`
+--
+
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `idUsuario` int(11) NOT NULL AUTO_INCREMENT,
+  `identificadorUsuario` varchar(30) NOT NULL,
+  `senhaUsuario` varchar(30) NOT NULL,
+  PRIMARY KEY (`idUsuario`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`idUsuario`, `identificadorUsuario`, `senhaUsuario`) VALUES
+(1, 'admin', 'admin');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

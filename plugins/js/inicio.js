@@ -20,3 +20,14 @@ function informacoesFilial(indice){
         closeButton: true
     });
 }
+
+function editCardapio(id){
+      $('#model').modal('show');
+      $('#modelTitle').html('Edite as informações');
+    $.post('viewEditarCardapio.php',function (retorna) {
+        //Subtitui o valor no seletor id="externas"
+        $("#modelBody").html(retorna);
+      alert(retorna);
+      });
+
+}

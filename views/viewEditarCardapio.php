@@ -61,7 +61,10 @@ else{
 		<link href="../fremeworks/bootstrap-4.4.1/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="../fremeworks/bootstrap-4.4.1/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 		<link rel="stylesheet" href="../plugins/css/font-awesome-4.7.0/css/font-awesome.min.css">
-		<style>								
+		<style>	
+		body{
+			background-color: #F6F2ED;
+		}							
 			label{
 				font-size:18px;
 			}
@@ -83,10 +86,17 @@ else{
 				width: 185px;
 				heigth: 185px;
 			}
+
+			#editCardapio{
+				margin-left: 270px;
+				width: 50vw;
+				margin-top: 90px;
+			}
 			
 		</style>
 	</head>
 	<body>
+		<div id="editCardapio" class="border border-warning">
 		<form action='' method=post>
 		<?php
 			while ($rowCardapio = $stmtCardapio->fetch(PDO::FETCH_ASSOC)) {
@@ -94,11 +104,11 @@ else{
 						<label><b>Sabor:</b></label>
 						<br>
 						<input type='text' class='texto' value='".$rowCardapio['nomeCardapio']."' name=sabor required>
-						<br>
+						<br><br>
 						<label><b>Ingredientes:</b></label>
 						<br>
 						<input type=text class=texto value='".$rowCardapio['ingredientesCardapio']."' name=ingredientes required>
-						<br>
+						<br><br>
 						<label><b>Tamanho:</b></label>
 						<br>
 					";	
@@ -157,10 +167,11 @@ else{
 						echo "<label for=GG>GG</label> ";
 						
 							
-			echo"		<br>		
+			echo"		<br><br>		
 						<label><b>Imagem:</b></label>
 						<br>
 						<input type=text class=texto name=imagem value='".$rowCardapio['imagemCardapio']."'>
+						<br><br>
 						<label><b>Tipo de Pizza:</b></label>
 						<br>
 						<input type=radio id=salgada name=tipo value='Salgada'";
@@ -177,11 +188,12 @@ else{
 				";
 			}
 		?>
-		<button type="button" onclick="document.location = '../index.php'">Cancelar</button>
-		<button type="submit" name="editado">Confirmar Mudanças</button>
-		<br>
+		<div style="margin-top: 30px;">
+			<button class="btn btn-danger" type="button" onclick="document.location = '../index.php#cardapio'">Cancelar</button>
+			<button type="submit" class="btn btn-primary" name="editado">Confirmar Mudanças</button>
+		</div>
 		</form>
-			
+		</div>	
 	<body>
 	
 </html>

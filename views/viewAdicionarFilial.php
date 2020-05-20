@@ -21,7 +21,10 @@ if(isset($_POST["novo"])){
 		<link href="../fremeworks/bootstrap-4.4.1/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="../fremeworks/bootstrap-4.4.1/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 		<link rel="stylesheet" href="../plugins/css/font-awesome-4.7.0/css/font-awesome.min.css">
-		<style>								
+		<style>	
+		body {
+			background-color: #F6F2ED;
+		}							
 			label{
 				font-size:18px;
 			}
@@ -43,26 +46,36 @@ if(isset($_POST["novo"])){
 				width: 185px;
 				heigth: 185px;
 			}
+
+		#addFilial {
+			margin-left: 270px;
+			width: 45vw;
+			margin-top: 90px;
+		}
 			
 		</style>
 	</head>
 	<body>
+	<div id="addFilial" class="border border-warning">
 		<form action="" method="post">
 			<label><b>Local:</b></label>
 			<br>
 			<input type="text" class="texto" placeholder="Novo local" name="local" required>
-			<br>
+			<br><br>
 			<label><b>Telefone Fixo:</b></label>
 			<br>
 			<input type="text" class="texto" placeholder="Número do telefone" name="telefone" required>
-			<br>	
+			<br><br>
 			<label><b>Whatsapp da Filial:</b></label>
 			<br>	
 			<input type="text" class="texto" name="wpp" placeholder="Número do Whatsapp">
-		<button type="button" onclick="document.location = '../index.php'">Cancelar</button>
-		<button type="submit" name="novo">Confirmar Mudanças</button>
-		<br>
+			
+		<div style="margin-top: 30px;">
+				<button type="button" class="btn btn-danger" onclick="document.location = '../index.php#comoComprarEdit'">Cancelar</button>
+				<button type="submit" class="btn btn-primary" name="novo">Adicionar</button>
+			</div>
 		</form>
+		</div>
 	<body>
 </html>
 

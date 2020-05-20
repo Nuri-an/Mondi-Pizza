@@ -53,7 +53,11 @@ if(isset($_POST["novo"])){
 		<link href="../fremeworks/bootstrap-4.4.1/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="../fremeworks/bootstrap-4.4.1/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 		<link rel="stylesheet" href="../plugins/css/font-awesome-4.7.0/css/font-awesome.min.css">
-		<style>								
+		<style>			
+		
+		body{
+			background-color: #F6F2ED;
+		}
 			label{
 				font-size:18px;
 			}
@@ -75,19 +79,24 @@ if(isset($_POST["novo"])){
 				width: 185px;
 				heigth: 185px;
 			}
-			
+
+			#addCardapio{
+				margin-left: 270px;
+				width: 50vw;
+				margin-top: 90px;
+			}
 		</style>
 	</head>
-	<body>
+		<div id="addCardapio" class="border border-warning">
 		<form action="" method="post">
 			<label><b>Sabor:</b></label>
 			<br>
 			<input type="text" class="texto" placeholder="Novo sabor" name="sabor" required>
-			<br>
+			<br><br>
 			<label><b>Ingredientes:</b></label>
 			<br>
 			<input type="text" class="texto" placeholder="Lista de Ingredientes" name="ingredientes" required>
-			<br>
+			<br><br>
 			<label><b>Tamanho:</b></label>
 			
 			<br>
@@ -102,20 +111,24 @@ if(isset($_POST["novo"])){
 			<input type="checkbox" id="GG" name=gg>			
 			<label for="GG">GG</label>
 					
-			<br>		
+			<br>		<br>
 			<label><b>Imagem:</b></label>
 			<br>	
 			<input type="text" class="texto" name="imagem" placeholder="Nome da imagem">
+			<br><br>
 			<label><b>Tipo de Pizza:</b></label>
 			<br>
 		    <input type="radio" id="salgada" name="tipo" value="Salgada">
 		    <label for="salgada">Salgada</label><br>
 		    <input type="radio" if="doce" name="tipo" value="Doce">
 		    <label for="doce">Doce</label><br>
-		<button type="button" onclick="document.location = '../index.php'">Cancelar</button>
-		<button type="submit" name="novo">Confirmar Mudanças</button>
-		<br>
+		
+			<div style="margin-top: 30px;">
+			<button class="btn btn-danger" type="button" onclick="document.location = '../index.php#cardapio'">Cancelar</button>
+			<button type="submit" class="btn btn-primary" name="novo">Adicionar</button>
+		</div>
 		</form>
+		</div>
 	<body>
 </html>
 
